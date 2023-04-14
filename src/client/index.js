@@ -1,4 +1,5 @@
 import { handleSubmit } from './js/submitHandler'
+import { evaluationHelper } from './js/evaluationHelper'
 
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -10,5 +11,6 @@ import './styles/header.scss'
 
 
 export {
-    handleSubmit
+    handleSubmit,
+    evaluationHelper
 }
