@@ -1,9 +1,11 @@
-var path = require('path')
-const express = require('express')
-const bodyParser = require('body-parser')
-const cors = require ('cors')
+const path = require('path')
+const express  = require('express')
+const bodyParser  = require('body-parser')
+const cors  = require('cors')
+const FormData  = require('form-data');
+const fetch  = require('node-fetch');
 
-const dotenv = require('dotenv');
+const dotenv  = require('dotenv');
 dotenv.config();
 
 const APIKey = process.env.API_KEY;
@@ -26,14 +28,13 @@ app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
 
-
 app.post('/analyze', (request, response) => {
     const text = request.body.text;
 
     const formdata = new FormData();
         formdata.append("key", APIKey);
-        formdata.append("txt", text);
-        formdata.append("lang", "auto");  
+        formdata.append("txt",text);
+        formdata.append("lang", "en");  
 
     const requestOptions = {
         method: 'POST',
@@ -42,20 +43,23 @@ app.post('/analyze', (request, response) => {
     };
 
     const analysis = async () => {
-        const answer = await fetch("https://api.meaningcloud.com/sentiment-2.1", requestOptions);
-        //https://learn.meaningcloud.com/developer/sentiment-analysis/2.1/console
+        const answer = await fetch("https://api.meaningcloud.com/sentiment-2.1", requestOptions)        
         try {
-            const result = await answer.body.json();
-            console.log('blaaaah')
+            const result = await answer.json();
             return result;
         } catch (err) {
             console.log('ERROR', err);
         }
-    
-    const analysisResult = analysis();
-
-    response.send(analysisResult);
     }
+    analysis()
+        .then((analysisResult) => {
+            console.log(analysisResult)
+            response.send(analysisResult)
+        })
+    // const analysisResult = analysis();
+    // console.log(analysisResult);
+    // response.send(analysisResult);
+    
 })
-
+        //https://learn.meaningcloud.com/developer/sentiment-analysis/2.1/console
 

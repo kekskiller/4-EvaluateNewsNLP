@@ -7,6 +7,7 @@
         <link rel="stylesheet/scss" type="text/css" href="/styles/base.scss">
         <link rel="stylesheet/scss" type="text/css" href="/styles/header.scss">
         <link rel="stylesheet/scss" type="text/css" href="/styles/form.scss">
+        <link rel="stylesheet/scss" type="text/css" href="/styles/main.scss">
         <link rel="stylesheet/scss" type="text/css" href="/styles/footer.scss">
     </head>
 
@@ -43,13 +44,25 @@
 
             <section>
                 <strong>Results:</strong>
-                <div id="results"></div>
+                <div id="results">
+                    <div>Your text</div>
+                    <div id="analyzed-text"></div>
+
+                    <div id="vocal-pol">
+                        is rated <span id="polarity-rating"></span>
+                    </div>
+                    
+                    <div id="vocal-sub">
+                        and turns out to be rather <span id="subjectivity-rating"></span>
+                    </div>
+
+                </div>
             </section>
 
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>Thank you for using the Text Analyzer, created by @kekskiller</p>
         </footer>
         <script>
             // Check that service workers are supported
