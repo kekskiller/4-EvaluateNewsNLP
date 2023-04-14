@@ -1,4 +1,6 @@
 function evaluationHelper(results) {
+    console.log(results.score_tag)
+    console.log(results.subjectivity)
     const polarityTag ={
         'P+': 'strong positive',
         P: 'positive',

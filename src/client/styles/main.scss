@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Roboto&display=swap');
+
+#vocal-title {
+    font-weight:800;
+    font-size: 1.8em;
+    margin: 3vh;
+    font-family: 'Gruppo', cursive;
+}
+
 #results {
     display: none;
+    margin: 3vh;
+    padding: 0px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+#analyzed-text {
+    font-weight: 800;
+    padding: 8px;
+    line-height:2em;
+}
+
+.desctxt {
+    line-height:2em;
+}
+
+#polarity-rating, #subjectivity-rating{
+    font-size:1.2em;
+    font-weight:600;
 }

@@ -14,11 +14,8 @@
     <body>
 
         <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
+            <div class="title">
+                TEXT ANALYZER
             </div>
         </header>
 
@@ -33,6 +30,7 @@
                         placeholder="Name"
                     >
                     <input 
+                        id="submitBtn"
                         type="submit" 
                         name="" 
                         value="Check Text" 
@@ -43,16 +41,16 @@
             </section>
 
             <section>
-                <strong>Results:</strong>
+                <div id="vocal-title">RESULTS</div>
                 <div id="results">
-                    <div>Your text</div>
+                    <div class="desctxt">Your text</div>
                     <div id="analyzed-text"></div>
 
-                    <div id="vocal-pol">
+                    <div class="desctxt">
                         is rated <span id="polarity-rating"></span>
                     </div>
                     
-                    <div id="vocal-sub">
+                    <div class="desctxt">
                         and turns out to be rather <span id="subjectivity-rating"></span>
                     </div>
 
@@ -62,7 +60,7 @@
         </main>
 
         <footer>
-            <p>Thank you for using the Text Analyzer, created by @kekskiller</p>
+            <p>Thank you for using the Text Analyzer, created by <a href="https://github.com/kekskiller/">KEKSKILLER</a> </p>
         </footer>
         <script>
             // Check that service workers are supported

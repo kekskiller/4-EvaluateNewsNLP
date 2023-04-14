@@ -53,12 +53,9 @@ app.post('/analyze', (request, response) => {
     }
     analysis()
         .then((analysisResult) => {
-            console.log(analysisResult)
             response.send(analysisResult)
         })
-    // const analysisResult = analysis();
-    // console.log(analysisResult);
-    // response.send(analysisResult);
+
     
 })
         //https://learn.meaningcloud.com/developer/sentiment-analysis/2.1/console

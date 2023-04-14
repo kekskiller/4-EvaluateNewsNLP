@@ -1,5 +1,17 @@
-header {
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Roboto&display=swap');
+footer {
     display: flex;
     justify-content: center;
-    padding: 10px 40px;
+    align-items: center;
+    height: 7vh;
+    border-top: 1px solid black;
+    background-color: #bac7c4;
+    a {
+        font-family: 'Gruppo', cursive;
+        font-size: 1.3em;
+        color: black;
+        &:visited{
+            color: black
+        }
+    }
 }
