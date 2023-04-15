@@ -9,18 +9,6 @@ const event = {
     preventDefault: jest.fn(),
 }
 
-// const mockEval = jest.fn();
-
-// jest.mock('../js/evaluationHelper', ()=> ({
-//     evaluationHelper: () => mockEval
-// }))
-
-// global.fetch = jest.fn(() =>
-//     Promise.resolve({
-//         json: () => Promise.resolve({ text: 'yay' }),
-//     })
-// );
-
 beforeEach(() => {
     document.body.innerHTML += '<input id=\"textToAnalyse\" value=\"\"></input> <div id=\"results\"></div>';
     fetch.mockClear();
