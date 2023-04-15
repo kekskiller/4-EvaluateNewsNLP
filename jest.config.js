@@ -1,7 +1,8 @@
 setupFilesAfterEnv: ['./jest-setup.js']
 
-const config = {
-    verbose: true,
-  };
-  
-  module.exports = config;
+/** @type {import('jest').Config} */
+
+
+module.exports = {
+  verbose: true,
+};

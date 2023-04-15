@@ -25,7 +25,6 @@ function handleSubmit(event) {
 
         postText('/analyze', testegg)
             .then((textResults) => {
-                console.log(textResults)
                 evaluationHelper(textResults)
             })
     } else {
