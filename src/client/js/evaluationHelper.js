@@ -1,6 +1,5 @@
 function evaluationHelper(results) {
-    console.log(results.score_tag)
-    console.log(results.subjectivity)
+
     const polarityTag ={
         'P+': 'strong positive',
         P: 'positive',
@@ -14,7 +13,7 @@ function evaluationHelper(results) {
         'SUBJECTIVE': 'subjective'
     }
 
-    document.getElementById('results').style.cssText = 'display:block;'
+    document.getElementById('results').style.cssText = 'visibility:visible;'
     document.getElementById('analyzed-text').innerHTML = results.sentence_list[0].text + '...'
     document.getElementById('polarity-rating').innerHTML = polarityTag[results.score_tag]
     document.getElementById('subjectivity-rating').innerHTML = subjectivityTag[results.subjectivity]

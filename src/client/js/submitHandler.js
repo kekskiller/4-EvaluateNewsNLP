@@ -25,11 +25,12 @@ function handleSubmit(event) {
 
         postText('/analyze', testegg)
             .then((textResults) => {
+                console.log(textResults)
                 evaluationHelper(textResults)
             })
     } else {
         alert('Please insert text to analyze!')
-        document.getElementById('results').style.cssText = 'display:none;'
+        document.getElementById('results').style.cssText = 'visibility:hidden;'
     }
 }
 
